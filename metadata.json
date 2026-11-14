@@ -1,0 +1,6 @@
+{
+  "name": "PersonaAI",
+  "description": "Plataforma minimalista de asistentes de IA con personalidades configurables, historial de versiones, comunidad y chat en tiempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

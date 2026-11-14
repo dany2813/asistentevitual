@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  /* Adobe Color Palette */
+  --palette-cerulean: #5099d6;
+  --palette-cerulean-strong: #3778ae;
+  --palette-cornflower: #76a4f9;
+  --palette-periwinkle: #a4a4ff;
+  --palette-silver: #dbdbdb;
+  --palette-slate: #6b6b6b;
+
+  /* 60-30-10 Minimalist Neutrals */
+  --bg-canvas: #fafbfd;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f3f5f8;
+  --ink-primary: #1a1d24;
+  --ink-muted: #6b6b6b;
+  --border-hairline: #dbdbdb;
+  --border-soft: #e7e9ee;
+
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--ink-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  h1, h2 {
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Minimalist Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--palette-cornflower);
+  outline-offset: 2px;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b;
+}
+
+/* Markdown Prose Styling */
+.prose-chat {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-primary);
+}
+
+.prose-chat p {
+  margin-bottom: 0.75rem;
+}
+
+.prose-chat p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3,
+.prose-chat h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-chat h2 {
+  font-size: 1.125rem;
+}
+
+.prose-chat h3 {
+  font-size: 1rem;
+}
+
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+  padding-left: 0.25rem;
+}
+
+.prose-chat ul {
+  list-style-type: disc;
+}
+
+.prose-chat ol {
+  list-style-type: decimal;
+}
+
+.prose-chat li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-chat blockquote {
+  border-left: 2px solid var(--palette-cerulean);
+  padding-left: 0.875rem;
+  color: var(--ink-muted);
+  margin: 0.75rem 0;
+}
+
+.prose-chat hr {
+  border: 0;
+  border-top: 1px solid var(--border-hairline);
+  margin: 1rem 0;
+}
+
+.prose-chat a {
+  color: var(--palette-cerulean-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-chat code.inline-code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: #f1f4f9;
+  border: 1px solid #e2e6ee;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  color: #1f3a5c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
